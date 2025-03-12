@@ -1,13 +1,296 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/public/assets/fonts/NeueHaasDisplay-XThin.woff2") format("woff2"),
+    url("/public/assets/fonts/NeueHaasDisplay-XThin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/public/assets/fonts/NeueHaasDisplay-Roman.woff2") format("woff2"),
+    url("/public/assets/fonts/NeueHaasDisplay-Roman.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/public/assets/fonts/NeueHaasDisplay-Thin.woff2") format("woff2"),
+    url("/public/assets/fonts/NeueHaasDisplay-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/public/assets/fonts/NeueHaasDisplay-Light.woff2") format("woff2"),
+    url("/public/assets/fonts/NeueHaasDisplay-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/public/assets/fonts/NeueHaasDisplay-Bold.woff2") format("woff2"),
+    url("/public/assets/fonts/NeueHaasDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/public/assets/fonts/NeueHaasDisplay-Black.woff2") format("woff2"),
+    url("/public/assets/fonts/NeueHaasDisplay-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/public/assets/fonts/NeueHaasDisplay-Mediu.woff2") format("woff2"),
+    url("/public/assets/fonts/NeueHaasDisplay-Mediu.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/public/assets/fonts/NeueHaasDisplay-XXThin.woff2") format("woff2"),
+    url("/public/assets/fonts/NeueHaasDisplay-XXThin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #f4f4f4;
+  --primary: #0154aa;
+  --light: #737a91;
+  --dark: #333333;
+  --primaryFont: "Neue Haas Grotesk Display Pro";
+}
+body {
+  margin: 0;
+  font-family: var(--primaryFont);
+  background-color: var(--bg) !important;
+}
+.clr-primary {
+  color: var(--primary);
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+main {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.sidebar {
+  position: sticky;
+  top: 100px;
+}
+.custom-nav li a.active {
+  font-weight: 600;
+  color: var(--primary) !important;
+}
+.custom-nav li {
+  margin-inline: 5px;
+}
+.custom-nav li a {
+  font-size: 16px;
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  color: var(--light);
+}
+.nav-search {
+  background-color: #f6f9ff;
+  border-radius: 8px;
+}
+.nav-search input,
+.nav-search span {
+  background-color: transparent !important;
+  box-shadow: none;
+  border: 0;
+  font-weight: 500;
+  font-family: var(--primaryFont);
+  color: var(--light);
+}
+.card {
+  border: 0 !important;
+  border-radius: 10px !important;
+}
+.profile {
+  width: 38px;
+  height: 38px;
+}
+.profile-card .card-img-top {
+  border-radius: 10px 10px 0 0;
+  height: 100px;
+  object-fit: cover;
+}
+.user-name {
+  font-family: var(--primaryFont);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--dark);
+}
+.user-bio {
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--dark);
+}
+.user-location {
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  font-size: 12px;
+  color: #585d6e;
+}
+.profileimg {
+  margin-top: -60px;
+}
+.profile-count li span {
+  color: var(--primary);
+  font-size: 16px;
+}
+.profile-count li {
+  list-style: none;
+  border-bottom: 1px solid #e9ecef;
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--dark);
+  display: flex;
+  justify-content: space-between;
+  padding-block: 10px;
+}
+.profile-count li:last-child {
+  border-bottom: none;
+}
+.my-calendar span {
+  margin-top: -10px;
+  position: absolute;
+  left: 20px;
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--light);
+  margin-bottom: 10px;
+}
+.my-calendar select {
+  border: 0;
+  font-family: var(--primaryFont);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--dark);
+  box-shadow: none !important;
+  cursor: pointer;
+}
+.heading span {
+  color: var(--primary);
+}
+.heading {
+  font-family: var(--primaryFont);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--dark);
+}
+.heading-md {
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--dark);
+}
+.para.active {
+  color: var(--primary);
+}
+.para {
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  font-size: 14px;
+  color: #585d6e;
+}
+.para-md {
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  font-size: 13px;
+  color: #585d6e;
+}
+.para-sm {
+  font-family: var(--primaryFont);
+  font-weight: 600;
+  font-size: 10px;
+  color: var(--dark);
+}
+.jobsearch {
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  font-size: 14px;
+  color: #585d6e;
+  border: 0 !important;
+  outline: 0 !important;
+  width: 100%;
+}
+
+.keyword-select select {
+  width: auto !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  font-size: 14px;
+  color: #585d6e;
+}
+.similar .para {
+  color: var(--light) !important;
+}
+hr {
+  color: #e9ecef !important;
+  opacity: 1 !important;
+}
+.job-icon {
+  width: 40px;
+  height: 40px;
+}
+.job-title {
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--dark);
+  line-height: normal;
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1900px !important;
+  }
+}
+@media (min-width: 992px) {
+  .keyword-select {
+    border-left: 1px solid #e9ecef !important;
+  }
+}
+@media (max-width: 992px) {
+  .keyword-select select {
+    padding-left: 0;
+  }
+  .jobsearch,
+  .keyword-select {
+    padding-block: 5px;
+    border-bottom: 1px solid #e9ecef !important;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 95% !important;
+  }
 }
