@@ -18,7 +18,7 @@ const JobSection = () => {
                 Featured Jobs
                 <Link to="#" className="para active ms-3">See Featured Jobs</Link>
             </p>
-            <div className="row row-cols-xl-5 row-cols-lg-3 row-cols-2">
+            <div className="row row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-1">
                 {data?.map((item, i) => (
                     <div className="mb-2 px-2" key={i}>
                         <JobCard data={item} tag={"Promoted"}/>
@@ -30,7 +30,7 @@ const JobSection = () => {
             Recommended Jobs
                 <Link to="#" className="para active ms-3">See Recommended Jobs</Link>
             </p>
-            <div className="row row-cols-xl-5 row-cols-lg-3 row-cols-2">
+            <div className="row row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-1">
                 {data?.map((item, i) => (
                     <div className="mb-2 px-2" key={i}>
                         <JobCard data={item}/>
