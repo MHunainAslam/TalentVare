@@ -11,7 +11,7 @@ const MainScreen = () => {
     return (
         <>
             <h1 className="heading">
-                Find your Dream Job, <span>Albert!</span> jj
+                Find your Dream Job, <span>Albert!</span>
             </h1>
             <p className="para">
                 Explore the latest job openings and apply for the best opportunities available today!
